@@ -20,8 +20,19 @@ allPhrases=(
     "Hi"
     "The doctor said I had tomato loss"
     "Ancient aliens, it's all true"
-    "Fedora 36"
+    "Fedora 37"
     "Awesome!"
+    "Science was a masquerade, meant to sell you lemonade"
+    "In man against machine. Machine will conquer all"
+    "Put a drop of vanilla behind each ear and you'll smell like a cookie all day"
+    "I know your name"
+    "I'm offering to you a business proposal"
+    "So tell me if you are a small business owner, because I am offering free ink and toner"
+    "My name is Wanita, I'm young and I'm lonely."
+    "For one hundred dollars in USD only get discount Levitra and discount Cialis"
+    "And you can own YourName.Com"
+    "UFOlogy, yes, it's all real"
+    "Is this the first time that you've ever seen Aurora Borealis crush mankind?"
 )
 
 phraseNumber=$[$RANDOM % ${#allPhrases[@]}]
