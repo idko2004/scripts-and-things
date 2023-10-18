@@ -20,19 +20,24 @@ allPhrases=(
     "Hi"
     "The doctor said I had tomato loss"
     "Ancient aliens, it's all true"
-    "Fedora 37"
+    "Arch btw!"
     "Awesome!"
     "Science was a masquerade, meant to sell you lemonade"
     "In man against machine. Machine will conquer all"
-    "Put a drop of vanilla behind each ear and you'll smell like a cookie all day"
     "I know your name"
     "I'm offering to you a business proposal"
-    "So tell me if you are a small business owner, because I am offering free ink and toner"
-    "My name is Wanita, I'm young and I'm lonely."
-    "For one hundred dollars in USD only get discount Levitra and discount Cialis"
     "And you can own YourName.Com"
     "UFOlogy, yes, it's all real"
     "Is this the first time that you've ever seen Aurora Borealis crush mankind?"
+    "'git gut' is not a git argument"
+	"I'm in your sudoers file"
+	"There will be blood"
+	"A place to empty the mind"
+	"Falling down the stairs; star fruits, apples, grapes, and pears"
+	"...?rosseforP yas I dluohs ro ,traehdloC .rM uoy tuoba woh ,owt"
+	"rof aet deen I"
+	"Owt-weM ot ecin ykcuL ykcuL"
+	"Mold en Mono has a cold sharp scimitar"
 )
 
 phraseNumber=$[$RANDOM % ${#allPhrases[@]}]
@@ -45,7 +50,8 @@ commandNumber=$[$RANDOM % 10 + 1]
 
 if [[ $commandNumber -gt 4 ]]
 then
-    figlet $phrase -w `stty size | cut -d" " -f2`| lolcat -r
+	sleep 0.1
+    figlet $phrase -w `tput cols` | lolcat
 else
     allCows=("beavis.zen" "blowfish" "bud-frogs" "bunny" "cheese" "cower" "default" "dragon" "dragon-and-cow" "elephant" "elephant-in-snake" "eyes" "flaming-sheep" "fox" "ghostbusters" "head-in" "hellokitty" "kiss" "kitty" "koala" "kosh" "luke-koala" "meow" "milk" "moofasa" "moose" "mutilated" "ren" "sheep" "skeleton" "small" "stegosaurus" "stimpy" "supermilker" "surgery" "telebears" "three-eyes" "turkey" "turtle" "tux" "udder" "vader" "vader-koala" "www")
 

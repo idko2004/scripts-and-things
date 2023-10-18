@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 if ! command -v figlet >/dev/null
 then
@@ -8,6 +8,20 @@ fi
 
 figlet Sudo password
 sudo echo ":)"
+
+if command -v pacman >/dev/null
+then
+	figlet Pacman
+	notify-send "Pacman update" "Pacman puede requerir confirmación para continuar"
+	sudo pacman -Syu
+fi
+
+if command -v paru >/dev/null
+then
+	figlet Paru
+	notify-send "Paru update" "Paru puede requerir confirmación para continuar"
+	sudo paru -Syu
+fi
 
 if command -v dnf >/dev/null
 then

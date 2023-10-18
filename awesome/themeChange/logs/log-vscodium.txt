@@ -1,0 +1,44 @@
+vscodium: Wed Oct 18 2023 19:29:11 GMT-0300 (Paraguay Summer Time)
+
+cambiando a tema dark
+
+---input:{
+    "workbench.colorTheme": "Bluloco Dark Italic",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font','Droid Sans Mono', 'monospace', monospace",
+    "editor.renderWhitespace": "boundary",
+    "editor.insertSpaces": false,
+    "editor.wordWrap": "on",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.guides.bracketPairs": true,
+    "editor.detectIndentation": false,
+    "editor.smoothScrolling": true,
+    "editor.stickyScroll.enabled": true,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorSurroundingLines": 7,
+    "editor.cursorSurroundingLinesStyle": "all",
+    "editor.minimap.maxColumn": 60,
+    "editor.unicodeHighlight.nonBasicASCII": false
+}
+
+---output:{
+    "workbench.colorTheme": "Bluloco Dark Italic",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font','Droid Sans Mono', 'monospace', monospace",
+    "editor.renderWhitespace": "boundary",
+    "editor.insertSpaces": false,
+    "editor.wordWrap": "on",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.guides.bracketPairs": true,
+    "editor.detectIndentation": false,
+    "editor.smoothScrolling": true,
+    "editor.stickyScroll.enabled": true,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorSurroundingLines": 7,
+    "editor.cursorSurroundingLinesStyle": "all",
+    "editor.minimap.maxColumn": 60,
+    "editor.unicodeHighlight.nonBasicASCII": false
+}
+archivo guardado

@@ -1,0 +1,18 @@
+{
+    "workbench.colorTheme": "Bluloco Dark Italic",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "'JetBrains Mono','Droid Sans Mono', 'monospace', monospace",
+    "editor.renderWhitespace": "boundary",
+    "editor.insertSpaces": false,
+    "editor.wordWrap": "on",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.guides.bracketPairs": true,
+	"editor.detectIndentation": false,
+	"editor.smoothScrolling": true,
+	"editor.stickyScroll.enabled": true,
+	"editor.cursorBlinking": "smooth",
+	"editor.cursorSmoothCaretAnimation": "on",
+	"editor.cursorSurroundingLines": 7,
+	"editor.cursorSurroundingLinesStyle": "all",
+	"editor.minimap.maxColumn": 60
+}
