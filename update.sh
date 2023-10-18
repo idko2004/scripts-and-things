@@ -20,7 +20,7 @@ if command -v paru >/dev/null
 then
 	figlet Paru
 	notify-send "Paru update" "Paru puede requerir confirmación para continuar"
-	sudo paru -Syu
+	paru -Syu
 fi
 
 if command -v dnf >/dev/null
