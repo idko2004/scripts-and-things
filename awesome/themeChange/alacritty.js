@@ -1,9 +1,9 @@
 console.log('Cambiando tema de alacritty');
 
-const filepath = '/home/idko/.config/alacritty/alacritty.yml';
+const filepath = '/home/idko/.config/alacritty/alacritty.toml';
 
-const darkTheme = '/home/idko/.config/alacritty/alacritty-dark.yml';
-const lightTheme = '/home/idko/.config/alacritty/alacritty-light.yml';
+const darkTheme = '/home/idko/.config/alacritty/alacritty-dark.toml';
+const lightTheme = '/home/idko/.config/alacritty/alacritty-light.toml';
 
 const fs = require('fs');
 const log = require('./log');

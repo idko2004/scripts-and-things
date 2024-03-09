@@ -2,8 +2,8 @@ console.log('Cambiando tema de gtk3');
 
 const filepath = '/home/idko/.config/gtk-3.0/settings.ini';
 
-const darkTheme = 'Jasper-Dark-Nord'
-const lightTheme = 'Jasper-Light-Nord';
+const darkTheme = 'Yaru-dark'
+const lightTheme = 'Yaru';
 const darkIcons = 'Colloid-dark';
 const lightIcons = 'Colloid-light';
 

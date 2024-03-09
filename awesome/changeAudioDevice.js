@@ -4,7 +4,7 @@ main();
 
 async function main()
 {
-	await exec("pactl -f json list sinks short", async function(error, stdout, stderr)
+	await exec("pactl -f json list sinks", async function(error, stdout, stderr)
 	{
 		if (error)
 		{
@@ -20,7 +20,7 @@ async function main()
 		}
 		const sinks = parseListSinks(stdout);
 		const defaultSink = await getDefaultSink();
-		const sinkIndex = sinks.indexOf(defaultSink);
+		const sinkIndex = getDefaultSinkIndex(defaultSink, sinks);
 		console.log({sinkIndex});
 
 		let newSinkIndex = sinkIndex + 1;
@@ -34,15 +34,17 @@ async function main()
 			return;
 		}
 
-		await exec(`pactl set-default-sink ${newSink}`, (error, stdout, stderr) =>
+		await exec(`pactl set-default-sink ${newSink.name}`, (error, stdout, stderr) =>
 		{
 			let notificationTitle = "Audio device changed";
-			let notificationBody =  "Audio is now on ";
+			let notificationBody = `Audio is now on ${newSink.nick}`;
 
+			/*
 			let sinkNameSplit = newSink.split(".");
 			let lastPartSinkName = sinkNameSplit[sinkNameSplit.length - 1];
 
 			notificationBody += lastPartSinkName;
+			*/
 
 			if(error) notificationBody += `\n${error}`;
 			if(stdout) notificationBody += `\n${stdout}`;
@@ -66,7 +68,11 @@ function parseListSinks(listSinksOutput)
 		let sinksNames = [];
 		for(let i = 0; i < sinks.length; i++)
 		{
-			sinksNames.push(sinks[i].name);
+			sinksNames.push(
+			{
+				name: sinks[i].name,
+				nick: sinks[i].properties['device.nick']
+			});
 		}
 
 		console.log({sinksNames});
@@ -103,4 +109,12 @@ function getDefaultSink()
 			resolve(stdout.trim());
 		});
 	});
+}
+
+function getDefaultSinkIndex(defaultSink, sinks)
+{
+	for(let i = 0; i < sinks.length; i++)
+	{
+		if(sinks[i].name === defaultSink) return i;
+	}
 }

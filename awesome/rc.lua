@@ -303,6 +303,16 @@ globalkeys = gears.table.join(
 		}
 	),
 
+	awful.key({modkey}, "v",
+		function()
+			awful.util.spawn("/usr/lib/gpaste/gpaste-ui")
+		end,
+		{
+			description="Gpaste: Clipboard manager",
+			group="things"
+		}
+	),
+
 ----------------------------------
 
 	awful.key({ modkey,}, "h",

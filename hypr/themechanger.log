@@ -1,5 +1,6 @@
-vscodium: Fri Mar 08 2024 23:31:02 GMT-0300 (Paraguay Summer Time)
-
+Fri Mar  8 11:31:01 PM -03 2024
+--Aplicando tema oscuro
+Cambiando tema de vscodium
 cambiando a tema dark
 
 ---input:{
@@ -40,5 +41,35 @@ cambiando a tema dark
     "editor.cursorSurroundingLinesStyle": "all",
     "editor.minimap.maxColumn": 60,
     "editor.unicodeHighlight.nonBasicASCII": false
+}
+archivo guardado
+Cambiando tema de alacritty
+cambiando a tema dark
+
+---input:import = ["~/.config/alacritty/themes/themes/onedark.toml"]
+
+[font.normal]
+family = "UbuntuMono Nerd Font"
+
+[font]
+size = 12
+
+[window]
+dynamic_padding = true
+padding = { x = 8, y = 8 }
+
+[selection]
+save_to_clipboard = true
+
+archivo guardado
+Cambiando tema de micro
+cambiando a tema dark
+
+---input:{
+    "colorscheme": "bubblegum"
+}
+
+---output:{
+    "colorscheme": "railscast"
 }
 archivo guardado

@@ -1,12 +1,20 @@
-alacritty: Wed Oct 18 2023 19:29:12 GMT-0300 (Paraguay Summer Time)
+alacritty: Fri Mar 08 2024 23:31:02 GMT-0300 (Paraguay Summer Time)
 
 cambiando a tema dark
 
----input:import:
-- ~/.config/alacritty/themes/themes/onedark.yaml
+---input:import = ["~/.config/alacritty/themes/themes/onedark.toml"]
 
-font:
-  normal:
-    family: JetBrainsMono Nerd Font
+[font.normal]
+family = "UbuntuMono Nerd Font"
+
+[font]
+size = 12
+
+[window]
+dynamic_padding = true
+padding = { x = 8, y = 8 }
+
+[selection]
+save_to_clipboard = true
 
 archivo guardado

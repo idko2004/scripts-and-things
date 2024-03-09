@@ -1,0 +1,14 @@
+import = ["~/.config/alacritty/themes/themes/onedark.toml"]
+
+[font.normal]
+family = "UbuntuMono Nerd Font"
+
+[font]
+size = 12
+
+[window]
+dynamic_padding = true
+padding = { x = 8, y = 8 }
+
+[selection]
+save_to_clipboard = true

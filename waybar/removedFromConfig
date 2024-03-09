@@ -1,0 +1,7 @@
+{
+	"modules-right": ["mpd", "idle_inhibitor", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "hyprland/language", "battery", "battery#bat2"],
+	"pulseaudio":
+	{
+		"format": "{volume}% {icon} {format_source}",
+	}
+}

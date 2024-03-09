@@ -1,7 +1,7 @@
 console.log('Cambiando tema de flatpak');
 
-const darkTheme = 'Jasper-Dark-Nord'
-const lightTheme = 'Jasper-Light-Nord';
+const darkTheme = 'Yaru-dark'; /*Jasper-Dark-Nord';*/
+const lightTheme = 'Yaru'; /*'Jasper-Light-Nord';*/
 const darkIcons = 'Colloid-dark';
 const lightIcons = 'Colloid-light';
 

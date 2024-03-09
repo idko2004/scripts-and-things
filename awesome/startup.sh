@@ -7,7 +7,7 @@ then
 	echo "Pipewire is running"
 else
 	echo "--Running pipewire"
-	/usr/bin/pripewire &
+	#/usr/bin/pipewire &
 	/usr/bin/pipewire-pulse &
 fi
 
@@ -32,7 +32,7 @@ then
 	echo "--Aplicando tema oscuro"
 	CHANGE_THEME_TO=dark /home/idko/.nvm/versions/node/v20.5.0/bin/node /home/idko/.config/awesome/themeChange/gtk3.js
 	CHANGE_THEME_TO=dark /home/idko/.nvm/versions/node/v20.5.0/bin/node /home/idko/.config/awesome/themeChange/gtk4.js
-	CHANGE_THEME_TO=dark /home/idko/.nvm/versions/node/v20.5.0/bin/node /home/idko/.config/awesome/themeChange/flatpak.js
+	#CHANGE_THEME_TO=dark /home/idko/.nvm/versions/node/v20.5.0/bin/node /home/idko/.config/awesome/themeChange/flatpak.js
 	CHANGE_THEME_TO=dark /home/idko/.nvm/versions/node/v20.5.0/bin/node /home/idko/.config/awesome/themeChange/vscodium.js
 	CHANGE_THEME_TO=dark /home/idko/.nvm/versions/node/v20.5.0/bin/node /home/idko/.config/awesome/themeChange/alacritty.js
 	CHANGE_THEME_TO=dark /home/idko/.nvm/versions/node/v20.5.0/bin/node /home/idko/.config/awesome/themeChange/micro.js
@@ -41,7 +41,7 @@ else
 	echo "--Aplicando tema claro"
 	CHANGE_THEME_TO=light /home/idko/.nvm/versions/node/v20.5.0/bin/node /home/idko/.config/awesome/themeChange/gtk3.js
 	CHANGE_THEME_TO=light /home/idko/.nvm/versions/node/v20.5.0/bin/node /home/idko/.config/awesome/themeChange/gtk4.js
-	CHANGE_THEME_TO=light /home/idko/.nvm/versions/node/v20.5.0/bin/node /home/idko/.config/awesome/themeChange/flatpak.js
+	#CHANGE_THEME_TO=light /home/idko/.nvm/versions/node/v20.5.0/bin/node /home/idko/.config/awesome/themeChange/flatpak.js
 	CHANGE_THEME_TO=light /home/idko/.nvm/versions/node/v20.5.0/bin/node /home/idko/.config/awesome/themeChange/vscodium.js
 	CHANGE_THEME_TO=light /home/idko/.nvm/versions/node/v20.5.0/bin/node /home/idko/.config/awesome/themeChange/alacritty.js
 	CHANGE_THEME_TO=light /home/idko/.nvm/versions/node/v20.5.0/bin/node /home/idko/.config/awesome/themeChange/micro.js
@@ -71,13 +71,13 @@ fi
 
 
 
-# Iniciar copyQ
-if pgrep -x "copyq" > /dev/null
+# Iniciar gpaste
+if pgrep -x "gpaste-daemon" > /dev/null
 then
-	echo "CopyQ is running"
+	echo "gpaste is running"
 else
-	echo "--Running copyQ"
-	copyq &
+	echo "--Running gpaste"
+	/usr/lib/gpaste/gpaste-daemon &
 fi
 
 
