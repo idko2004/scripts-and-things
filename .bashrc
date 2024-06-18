@@ -19,11 +19,17 @@ alias projects="cd ~/Documents/Projects/"
 alias bashrc="micro ~/.bashrc"
 alias m="micro"
 alias ssh-a01="ssh u0_a216@192.168.7.200 -p 8022"
-alias git-reset="echo 'Are you sure? backup your local files' && sudo echo 'D:' && git fetch origin && git reset --hard origin/master"
+alias git-hard-reset="echo 'Are you sure? backup your local files' && sudo echo 'D:' && git fetch origin && git reset --hard origin/master"
+alias git-soft-reset="git reset --soft HEAD^"
 #alias python="/home/idko/.local/share/python-venv/bin/python"
 #alias pip="/home/idko/.local/share/python-venv/bin/pip"
 
 RANGER_LOAD_DEFAULT_RC=false
+
+duplicate()
+{
+	alacritty --working-directory "${PWD}" >/dev/null & disown
+}
 
 update()
 {

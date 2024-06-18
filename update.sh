@@ -44,5 +44,7 @@ then
     flatpak update -y
 fi
 
+date > ~/.config/last-updated
+
 figlet Terminado!
 notify-send 'Update' 'Las actualizaciones ya han terminado'
