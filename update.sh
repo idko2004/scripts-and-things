@@ -27,6 +27,7 @@ if command -v dnf >/dev/null
 then
     figlet Dnf
     sudo dnf update -y
+    sudo dnf autoremove -y
 fi
 
 if command -v apt >/dev/null
