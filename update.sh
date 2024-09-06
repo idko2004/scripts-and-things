@@ -9,18 +9,22 @@ fi
 figlet Sudo password
 sudo echo ":)"
 
-if command -v pacman >/dev/null
-then
-	figlet Pacman
-	notify-send "Pacman update" "Pacman puede requerir confirmación para continuar"
-	sudo pacman -Syu
-fi
-
 if command -v paru >/dev/null
 then
 	figlet Paru
 	notify-send "Paru update" "Paru puede requerir confirmación para continuar"
 	paru -Syu
+elif command -v pacman >/dev/null
+	figlet Pacman
+	notify-send "Pacman update" "Pacman puede requerir confirmación para continuar"
+	sudo pacman -Syu
+fi
+
+if command -v zypper >/dev/null
+then
+	figlet Zypper
+	notify-send "Zypper distro update" "Zypper puede requerir confirmación para continuar"
+	sudo zypper dup
 fi
 
 if command -v dnf >/dev/null
