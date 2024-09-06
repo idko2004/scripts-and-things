@@ -15,6 +15,7 @@ then
 	notify-send "Paru update" "Paru puede requerir confirmación para continuar"
 	paru -Syu
 elif command -v pacman >/dev/null
+then
 	figlet Pacman
 	notify-send "Pacman update" "Pacman puede requerir confirmación para continuar"
 	sudo pacman -Syu
