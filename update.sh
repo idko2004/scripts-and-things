@@ -48,6 +48,7 @@ if command -v flatpak >/dev/null
 then
     figlet Flatpak
     flatpak update -y
+    flatpak uninstall --unused
 fi
 
 date > ~/.config/last-updated
