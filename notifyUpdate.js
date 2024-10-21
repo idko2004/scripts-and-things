@@ -1,7 +1,7 @@
 const fs = require('fs');
 const { exec } = require("child_process");
 
-const filePath = "/home/idko/.config/last-updated";
+const filePath = `${getHome()}/.config/last-updated`;
 
 async function main()
 {
@@ -21,18 +21,24 @@ async function main()
 
 		const oneWeekFromLastUpdated = date.getTime() + creationOfUniverse.getTime();
 
-		if(oneWeekFromLastUpdated >= now.getTime())
+		const delta = new Date(now.getTime() - oneWeekFromLastUpdated);
+		const deltaDays = delta.getDate();
+
+		if(deltaDays >= 10)
 		{
-			const delta = new Date(now.getTime() - oneWeekFromLastUpdated);
-			const deltaDays = delta.getDate();
 			await exec(`notify-send "Time to update software" "${deltaDays} days since last time"`);
 		}
-		else console.log('No need to update yet');
+		else console.log(`No need to update yet, ${deltaDays} days.`);
 	}
 	catch(err)
 	{
 		await exec(`notify-send "notifyUpdate.js crashed! D:" "${err}"`);
 	}
+}
+
+function getHome()
+{
+	return process.env.HOME;
 }
 
 main();

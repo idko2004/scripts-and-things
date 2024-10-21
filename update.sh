@@ -51,7 +51,7 @@ then
     flatpak uninstall --unused -y
 fi
 
-date > ~/.config/last-updated
+date -I > ~/.config/last-updated
 
 figlet Terminado!
 notify-send 'Update' 'Las actualizaciones ya han terminado'
