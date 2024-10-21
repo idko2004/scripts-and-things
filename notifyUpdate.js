@@ -14,14 +14,7 @@ async function main()
 
 		const now = new Date();
 
-		const creationOfUniverse = new Date(0);
-
-		//Ver si la fecha es mayor a una semana
-		creationOfUniverse.setDate(8); //Una semana desde la creación del universo
-
-		const oneWeekFromLastUpdated = date.getTime() + creationOfUniverse.getTime();
-
-		const delta = new Date(now.getTime() - oneWeekFromLastUpdated);
+		const delta = new Date(now.getTime() - date.getTime());
 		const deltaDays = delta.getDate();
 
 		if(deltaDays >= 10)
