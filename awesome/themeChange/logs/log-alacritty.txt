@@ -1,10 +1,8 @@
-alacritty: Fri Mar 08 2024 23:31:02 GMT-0300 (Paraguay Summer Time)
+alacritty: Wed Dec 25 2024 19:54:29 GMT-0300 (Paraguay Summer Time)
 
 cambiando a tema dark
 
----input:import = ["~/.config/alacritty/themes/themes/onedark.toml"]
-
-[font.normal]
+---input:[font.normal]
 family = "UbuntuMono Nerd Font"
 
 [font]
@@ -16,5 +14,14 @@ padding = { x = 8, y = 8 }
 
 [selection]
 save_to_clipboard = true
+
+[keyboard]
+bindings=[
+	{key= "PageUp",  action= "ScrollHalfPageUp"},
+	{key= "PageDown",  action= "ScrollHalfPageDown"}
+]
+
+[general]
+import = ["/home/idko/.config/alacritty/themes/alacritty-theme/themes/onedark.toml"]
 
 archivo guardado

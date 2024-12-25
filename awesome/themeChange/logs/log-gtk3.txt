@@ -1,19 +1,19 @@
-gtk3: Sat Mar 02 2024 23:32:06 GMT-0300 (Paraguay Summer Time)
+gtk3: Sat Apr 06 2024 00:06:23 GMT-0400 (Paraguay Standard Time)
 
-cambiando a tema dark
+cambiando a tema light
 
 ---input:[Settings]
-gtk-theme-name=Yaru-dark
-gtk-icon-theme-name=Colloid-dark
-gtk-font-name=Ubuntu Nerd Font Medium 11
+gtk-button-images=1
 gtk-cursor-theme-name=Posy_Cursor_Black
 gtk-cursor-theme-size=0
-gtk-toolbar-style=GTK_TOOLBAR_BOTH
-gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
-gtk-button-images=1
-gtk-menu-images=1
 gtk-enable-event-sounds=1
 gtk-enable-input-feedback-sounds=1
+gtk-font-name=Ubuntu Nerd Font Medium 11
+gtk-icon-theme-name=Colloid-light
+gtk-menu-images=1
+gtk-theme-name=Yaru
+gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
+gtk-toolbar-style=GTK_TOOLBAR_BOTH
 gtk-xft-antialias=1
 gtk-xft-hinting=1
 gtk-xft-hintstyle=hintfull
@@ -21,17 +21,17 @@ gtk-xft-rgba=rgb
 
 
 ---output:[Settings]
-gtk-theme-name=Yaru-dark
-gtk-icon-theme-name=Colloid-dark
-gtk-font-name=Ubuntu Nerd Font Medium 11
+gtk-button-images=1
 gtk-cursor-theme-name=Posy_Cursor_Black
 gtk-cursor-theme-size=0
-gtk-toolbar-style=GTK_TOOLBAR_BOTH
-gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
-gtk-button-images=1
-gtk-menu-images=1
 gtk-enable-event-sounds=1
 gtk-enable-input-feedback-sounds=1
+gtk-font-name=Ubuntu Nerd Font Medium 11
+gtk-icon-theme-name=Colloid-light
+gtk-menu-images=1
+gtk-theme-name=Yaru
+gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
+gtk-toolbar-style=GTK_TOOLBAR_BOTH
 gtk-xft-antialias=1
 gtk-xft-hinting=1
 gtk-xft-hintstyle=hintfull

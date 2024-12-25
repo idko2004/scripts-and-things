@@ -1,9 +1,9 @@
-vscodium: Fri Mar 08 2024 23:31:02 GMT-0300 (Paraguay Summer Time)
+vscodium: Wed Dec 25 2024 19:54:29 GMT-0300 (Paraguay Summer Time)
 
 cambiando a tema dark
 
 ---input:{
-    "workbench.colorTheme": "Bluloco Light Italic",
+    "workbench.colorTheme": "Bluloco Dark Italic",
     "workbench.iconTheme": "material-icon-theme",
     "editor.fontFamily": "'UbuntuMono Nerd Font','JetBrainsMono Nerd Font','Droid Sans Mono', 'monospace', monospace",
     "editor.renderWhitespace": "boundary",
@@ -16,10 +16,13 @@ cambiando a tema dark
     "editor.stickyScroll.enabled": true,
     "editor.cursorBlinking": "smooth",
     "editor.cursorSmoothCaretAnimation": "on",
-    "editor.cursorSurroundingLines": 7,
     "editor.cursorSurroundingLinesStyle": "all",
     "editor.minimap.maxColumn": 60,
-    "editor.unicodeHighlight.nonBasicASCII": false
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "editor.fontSize": 15,
+    "clangd.path": "/home/idko/.var/app/com.vscodium.codium/config/VSCodium/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/18.1.3/clangd_18.1.3/bin/clangd",
+    "files.insertFinalNewline": true,
+    "update.showReleaseNotes": false
 }
 
 ---output:{
@@ -36,9 +39,12 @@ cambiando a tema dark
     "editor.stickyScroll.enabled": true,
     "editor.cursorBlinking": "smooth",
     "editor.cursorSmoothCaretAnimation": "on",
-    "editor.cursorSurroundingLines": 7,
     "editor.cursorSurroundingLinesStyle": "all",
     "editor.minimap.maxColumn": 60,
-    "editor.unicodeHighlight.nonBasicASCII": false
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "editor.fontSize": 15,
+    "clangd.path": "/home/idko/.var/app/com.vscodium.codium/config/VSCodium/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/18.1.3/clangd_18.1.3/bin/clangd",
+    "files.insertFinalNewline": true,
+    "update.showReleaseNotes": false
 }
 archivo guardado

@@ -3,7 +3,7 @@ console.log('Cambiando tema de vscodium');
 const filepath = '/home/idko/.var/app/com.vscodium.codium/config/VSCodium/User/settings.json';
 
 const darkTheme = 'Bluloco Dark Italic';
-const lightTheme = 'Bluloco Light Italic';
+const lightTheme = 'Solarized Light';
 
 const fs = require('fs');
 const log = require('./log');
