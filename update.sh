@@ -36,7 +36,7 @@ then
 fi
 
 #Delete arch cache
-if DELETE_ARCH_CACHE -eq 1
+if [[ $DELETE_ARCH_CACHE == 1 ]]
 then
 	figlet "Cleaning"
 	if command -v pacman >/dev/null
@@ -47,12 +47,12 @@ then
 	if command -v yay >/dev/null
 	then
 		echo "Deleting yay cache..."
-		rm -r ~/.cache/yay/*
+		rm -fr ~/.cache/yay/*
 	fi
 	if command -v paru >/dev/null
 	then
 		echo "Deleting paru cache..."
-		rm -r ~/.cache/paru/*
+		rm -fr ~/.cache/paru/*
 	fi
 fi
 
