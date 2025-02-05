@@ -1,7 +1,8 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: 'UbuntuMono Nerd Font', Ubuntu, system-ui, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-family: 'Iosevka Nerd Font', 'UbuntuMono Nerd Font', Ubuntu, system-ui, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 window#waybar {
@@ -59,7 +60,7 @@ button:hover {
 }
 
 #workspaces button.active {
-    background-color: #3584e4;
+    background-color: #0753AF;
     box-shadow: inset 0 -3px #ffffff;
 }
 
@@ -87,6 +88,7 @@ button:hover {
 #mode,
 #idle_inhibitor,
 #scratchpad,
+#keyboard-state,
 #mpd {
     padding: 0 10px;
     color: #ffffff;
@@ -249,9 +251,8 @@ label:focus {
 
 #language {
     background: #00b093;
-    color: #740864;
+    color: #fff;
     padding: 0 5px;
-    margin: 0 5px;
     min-width: 16px;
 }
 
