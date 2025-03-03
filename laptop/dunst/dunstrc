@@ -49,5 +49,5 @@
     
 [play_sound]
     summary = "*"
-    script = "/home/idko/Documents/Projects/scripts-and-things/dunst/notification-sound.sh"
+    script = "/home/idko/Documents/Projects/scripts-and-things/laptop/dunst/notification-sound.sh"
 
