@@ -2,6 +2,8 @@
 
 ### VARIABLES PERSONALIZABLES
 DELETE_ARCH_CACHE=1 #Elimina paquetes de versiones anteriores que pacman almacena para poder revertir la actualización, pacman nunca elimina estos paquetes, por lo que pueden llegar a ocupar gigabytes de espacio. Si crees que no los vas a necesitar, pon esta variable a 1.
+USE_REFLECTOR=1 #Permite usar el comando reflector para actualizar mirrors
+REFLECTOR_COUNTRIES="Paraguay,Brazil,Chile,Mexico,United\\\ States,"
 ###
 
 if ! command -v figlet >/dev/null
@@ -18,43 +20,63 @@ fi
 figlet Sudo password
 sudo echo ":)"
 
+#ARCH SECTION
+
+if [[ $USE_REFLECTOR == 1 ]]
+then
+	if command -v reflector >/dev/null
+	then
+		figlet Reflector
+
+		#Please update this command to use your local mirrors
+		reflector --country "${REFLECTOR_COUNTRIES}" --protocol https --latest 10 | tee /tmp/io.github.idko2004.scriptsandthings.update
+		sudo mv /tmp/io.github.idko2004.scriptsandthings.update /etc/pacman.d/mirrorlist
+	fi
+fi
+
 if command -v paru >/dev/null
 then
 	figlet Paru
 	notify-send "Paru update" "Paru puede requerir confirmación para continuar"
 	paru -Syu
+	
+	if [[ $DELETE_ARCH_CACHE == 1 ]]
+	then
+		echo -e "\033[0;33mDeleting paru cache...\033[0m"
+		rm -fr ~/.cache/paru/*
+		echo -e "\033[0;33mDeleting pacman cache...\033[0m"
+		sudo rm /var/cache/pacman/pkg/*
+	fi
+
 elif command -v yay >/dev/null
 then
 	figlet Yay
 	notify-send "Yay update" "Yay puede requerir confirmación para continuar"
 	yay
+	
+	if [[ $DELETE_ARCH_CACHE == 1 ]]
+	then
+		echo -e "\033[0;33mDeleting yay cache...\033[0m"
+		rm -fr ~/.cache/yay/*
+		echo -e "\033[0;33mDeleting pacman cache...\033[0m"
+		sudo rm /var/cache/pacman/pkg/*
+	fi
+
 elif command -v pacman >/dev/null
 then
 	figlet Pacman
 	notify-send "Pacman update" "Pacman puede requerir confirmación para continuar"
 	sudo pacman -Syu
-fi
-
-#Delete arch cache
-if [[ $DELETE_ARCH_CACHE == 1 ]]
-then
-	figlet "Cleaning"
-	if command -v pacman >/dev/null
+	
+	if [[ $DELETE_ARCH_CACHE == 1 ]]
 	then
-		echo "Deleting pacman cache..."
+		echo -e "\033[0;33mDeleting pacman cache...\033[0m"
 		sudo rm /var/cache/pacman/pkg/*
 	fi
-	if command -v yay >/dev/null
-	then
-		echo "Deleting yay cache..."
-		rm -fr ~/.cache/yay/*
-	fi
-	if command -v paru >/dev/null
-	then
-		echo "Deleting paru cache..."
-		rm -fr ~/.cache/paru/*
-	fi
+
 fi
+
+#END ARCH SECTION
 
 if command -v zypper >/dev/null
 then
