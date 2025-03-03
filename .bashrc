@@ -18,15 +18,11 @@ PS1='\n\[\e[32;1m\]\u\[\e[0;36m\](\h) \[\e[94;1m\][\W]\n\[\e[93m\]-> \[\e[0m\]'
 alias projects="cd ~/Documents/Projects/"
 alias bashrc="micro ~/.bashrc"
 alias m="micro"
-alias ssh-a01="ssh u0_a216@192.168.7.200 -p 8022"
-alias ssh-j7="ssh u0_a216@192.168.7.202 -p 8022"
-alias git-hard-reset="echo 'Are you sure? backup your local files' && sudo echo 'D:' && git fetch origin && git reset --hard origin/master"
+alias git-hard-reset="echo 'Are you sure? backup your local files' && sudo echo 'D:' && git fetch origin && git reset --hard origin/main"
 alias git-soft-reset="git reset --soft HEAD^"
 #alias python="/home/idko/.local/share/python-venv/bin/python"
 #alias pip="/home/idko/.local/share/python-venv/bin/pip"
 alias pacman="sudo pacman"
-
-RANGER_LOAD_DEFAULT_RC=false
 
 duplicate()
 {
@@ -35,12 +31,12 @@ duplicate()
 
 update()
 {
-    /home/idko/Documents/Projects/scripts-and-things/update.sh
+    /home/idko/Documents/Projects/scripts-and-things/scripts/update.sh
 }
 
 t()
 {
-    /home/idko/Documents/Projects/scripts-and-things/t.sh
+    /home/idko/Documents/Projects/scripts-and-things/scripts/t.sh
 }
 
 cd()
@@ -50,7 +46,7 @@ cd()
 
 randomPhrase()
 {
-    /home/idko/Documents/Projects/scripts-and-things/saySomething.sh
+    /home/idko/Documents/Projects/scripts-and-things/scripts/saySomething.sh
 }
 
 theThingAtTheStart()

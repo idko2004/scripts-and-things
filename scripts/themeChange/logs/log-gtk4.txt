@@ -1,0 +1,12 @@
+gtk4: Sat Apr 06 2024 00:06:23 GMT-0400 (Paraguay Standard Time)
+
+cambiando a tema light
+
+---input:[Settings]
+gtk-application-prefer-dark-theme=false
+
+
+---output:[Settings]
+gtk-application-prefer-dark-theme=false
+
+archivo guardado

@@ -1,0 +1,12 @@
+micro: Wed Dec 25 2024 19:54:29 GMT-0300 (Paraguay Summer Time)
+
+cambiando a tema dark
+
+---input:{
+    "colorscheme": "railscast"
+}
+
+---output:{
+    "colorscheme": "railscast"
+}
+archivo guardado

@@ -1,0 +1,5 @@
+flatpak: Tue Nov 28 2023 17:12:47 GMT-0300 (Paraguay Summer Time)
+
+cambiando a tema dark
+ejecutando: flatpak override --user --env GTK_THEME=Yaru-dark
+ejecutando: flatpak override --user --env ICON_THEME=Colloid-dark
