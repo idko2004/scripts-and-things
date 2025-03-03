@@ -17,7 +17,7 @@ Sends a notification if 10 days have passed since the last system update.
 
 This is meant to run at startup and to be used with [`update.sh`](./update.sh).
 
-`update.sh` is writes the date it was executed at `~/.config/last-updated`. `notifyUpdate.js` reads that file and if it is more than 10 days ago, sends a notification telling you to update.
+`update.sh` writes the date it was executed at `~/.config/last-updated`. `notifyUpdate.js` reads that file and if it was more than 10 days ago, sends a notification telling you to update.
 
 ## [`update.sh`](./update.sh)
 An easy way to handle updating various package managers.
@@ -41,7 +41,7 @@ I have this aliased to `t` and to run automatically if the directory is not home
 ## [`screenfilter.sh`](./screenfilter.sh)
 I had a problem that if I runned wlsunset while there was alredy an instance of wlsunset running, if you did `pkill wlsunset`, it would no longer work. I know this is a very niche problem to have.
 
-This script just runs `wlsunset` in a very specific configuration that makes it work instantly and not gradually, and sets the screen brightness to the minimun, but only if `wlsunset` is not alredy running.
+This script just runs `wlsunset` in a very specific configuration that makes it work instantly and not gradually, and sets the screen brightness to the minimum, but only if `wlsunset` is not alredy running.
 
 This is useful if you are watching videos in the dark, like an anime or a series or something, and the video changes between dark areas and bright areas all the time, so you set up keybindings to set a night filter and to kill the night filter.
 
