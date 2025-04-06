@@ -2,7 +2,7 @@ console.log('Cambiando tema de micro');
 
 const filepath = '/home/idko/.config/micro/settings.json';
 
-const darkTheme = 'railscast';
+const darkTheme = 'material-tc';
 const lightTheme = 'bubblegum';
 
 const fs = require('fs');
