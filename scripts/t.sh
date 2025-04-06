@@ -6,5 +6,6 @@ eza -1a --icons --group-directories-first
 if [ -d "$PWD/.git" ]
 then
 	echo -e "\n\033[1;33mGit status:\033[0m"
+	echo -e "Working as user \033[1;33m$(git config user.name)\033[0m($(git config user.email))"
 	git status | cat
 fi
