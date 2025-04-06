@@ -1,7 +1,7 @@
 const fs = require('fs');
 const { exec } = require("child_process");
 
-const filePath = `${getHome()}/.config/last-updated`;
+const filePath = `${getHome()}/.local/share/idko2004.github.io/last-updated`;
 
 async function main()
 {
