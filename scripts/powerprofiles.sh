@@ -1,14 +1,15 @@
 #!/bin/bash
+RESULT="$(echo -e $'Battery save\nBalanced\nPerformance' | rofi -dmenu -font 'UbuntuMono Nerd Font Bold 14')"
 
-if [[ $1 == "performance" ]]
+if [[ $RESULT == "Performance" ]]
 then
 	powerprofilesctl set performance
 	notify-send "Power Profiles" "Performance mode set" -u low
-elif [[ $1 == "balanced" ]]
+elif [[ $RESULT == "Balanced" ]]
 then
 	powerprofilesctl set balanced
 	notify-send "Power Profiles" "Balanced mode set" -u low
-elif [[ $1 == "power-saver" ]]
+elif [[ $RESULT == "Battery save" ]]
 then
 	powerprofilesctl set power-saver
 	notify-send "Power Profiles" "Power Saver mode set" -u low
