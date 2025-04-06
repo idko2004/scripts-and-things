@@ -30,6 +30,7 @@ then
 
 		#Please update this command to use your local mirrors
 		reflector --country "${REFLECTOR_COUNTRIES}" --protocol https --latest 15 --fastest 5 --save /tmp/io.github.idko2004.scriptsandthings.update
+		cat /tmp/io.github.idko2004.scriptsandthings.update #Just to show the result in the terminal
 		sudo mv /tmp/io.github.idko2004.scriptsandthings.update /etc/pacman.d/mirrorlist
 	fi
 fi
