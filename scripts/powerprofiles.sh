@@ -1,5 +1,5 @@
 #!/bin/bash
-RESULT="$(echo -e $'Battery save\nBalanced\nPerformance' | rofi -dmenu -font 'UbuntuMono Nerd Font Bold 14')"
+RESULT="$(echo -e $'Battery save\nBalanced\nPerformance' | rofi -dmenu -font 'Iosevka Nerd Font Bold 14')"
 
 if [[ $RESULT == "Performance" ]]
 then
@@ -12,7 +12,7 @@ then
 elif [[ $RESULT == "Battery save" ]]
 then
 	powerprofilesctl set power-saver
-	notify-send "Power Profiles" "Power Saver mode set" -u low
+	notify-send "Power Profiles" "Battery save mode set" -u low
 else
 	notify-send "Power Profiles" "Undetermined power profile D:" -u critical
 fi
