@@ -43,17 +43,5 @@ phraseNumber=$[$RANDOM % ${#allPhrases[@]}]
 
 phrase=${allPhrases[$phraseNumber]}
 
-    allCows=("beavis.zen" "blowfish" "bud-frogs" "bunny" "cheese" "cower" "default" "dragon" "dragon-and-cow" "elephant" "elephant-in-snake" "eyes" "flaming-sheep" "fox" "ghostbusters" "head-in" "hellokitty" "kiss" "kitty" "koala" "kosh" "luke-koala" "meow" "milk" "moofasa" "moose" "mutilated" "ren" "sheep" "skeleton" "small" "stegosaurus" "stimpy" "surgery" "three-eyes" "turkey" "turtle" "tux" "udder" "vader" "vader-koala" "www")
-
-
-    cowNumber=$[$RANDOM % $((${#allCows[@]} + 5))] #dejar 5 extras para default
-
-    if [[ $cowNumber -gt  $((${#allCows[@]} - 1)) ]]
-    then
-        cow="default"
-    else
-        cow=${allCows[$cowNumber]}
-    fi
-
-    cowsay -f $cow $phrase
+cowsay -r $phrase
 

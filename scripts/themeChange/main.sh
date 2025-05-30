@@ -19,7 +19,7 @@ then
 	export CHANGE_THEME_TO=dark
 	
 	gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-dark'
-	gsettings set org.gnome.desktop.interface icon-theme 'Colloid-dark'
+	#gsettings set org.gnome.desktop.interface icon-theme 'Colloid-dark'
 	gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 else
@@ -28,7 +28,7 @@ else
 	export CHANGE_THEME_TO=light
 
 	gsettings set org.gnome.desktop.interface gtk-theme 'Yaru'
-	gsettings set org.gnome.desktop.interface icon-theme 'Colloid-light'
+	#gsettings set org.gnome.desktop.interface icon-theme 'Colloid-light'
 	gsettings set org.gnome.desktop.interface color-scheme 'default'
 fi
 echo $CHANGE_THEME_TO

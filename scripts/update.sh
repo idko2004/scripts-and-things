@@ -77,7 +77,7 @@ then
 	then
 		cowsay "Deleting yay and pacman cache..."
 		rm -fr ~/.cache/yay/*
-		sudo rm /var/cache/pacman/pkg/*
+		sudo rm -r /var/cache/pacman/pkg/*
 	fi
 
 elif command -v paru >/dev/null
