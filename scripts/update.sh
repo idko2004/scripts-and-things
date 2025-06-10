@@ -57,7 +57,7 @@ then
 		if [[ "$(cat ~/.local/share/idko2004.github.io/last-updated)" != "$(date -I)" ]]
 		then
 			#Please update this command to use your local mirrors
-			reflector --verbose --country "${REFLECTOR_COUNTRIES}" --protocol https --latest 25 --fastest 5 --save /tmp/idko2004-reflector
+			reflector --verbose --country "${REFLECTOR_COUNTRIES}" --protocol https --latest 15 --fastest 5 --save /tmp/idko2004-reflector
 			cat /tmp/idko2004-reflector #Just to show the result in the terminal
 			sudo mv /tmp/idko2004-reflector /etc/pacman.d/mirrorlist
 		else
