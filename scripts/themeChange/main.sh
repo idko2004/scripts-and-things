@@ -35,8 +35,8 @@ echo $CHANGE_THEME_TO
 $NODE_COMMAND /home/idko/.config/awesome/themeChange/flatpak.js
 $NODE_COMMAND /home/idko/.config/awesome/themeChange/vscodium.js
 $NODE_COMMAND /home/idko/.config/awesome/themeChange/alacritty.js
-$NODE_COMMAND /home/idko/.config/awesome/themeChange/micro.js
-#$NODE_COMMAND /home/idko/.config/awesome/themeChange/gtk3.js
-#$NODE_COMMAND /home/idko/.config/awesome/themeChange/gtk4.js
+#$NODE_COMMAND /home/idko/.config/awesome/themeChange/micro.js
+$NODE_COMMAND /home/idko/.config/awesome/themeChange/gtk3.js
+$NODE_COMMAND /home/idko/.config/awesome/themeChange/gtk4.js
 
 unset CHANGE_THEME_TO
