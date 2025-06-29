@@ -1,6 +1,6 @@
 [global]
     width = 400
-    offset = 5x5
+    offset = (5, 5)
     
     progress_bar_min_width = 380
     progress_bar_max_width = 380
@@ -20,8 +20,8 @@
     foreground = "#e0def4"
     
     # Uncomment this if you want to let notications appear under fullscreen
-    # applications = (default: overlay)
-    layer = top
+    #applications = (default: overlay)
+    layer = overlay
 
 [fullscreen_show_all]
     fullscreen = show
@@ -31,7 +31,7 @@
     highlight = "#31748f"
     frame_color = "#31748f"
     default_icon = "dialog-information"
-    format = "<b><span foreground='#31748f'>%s</span></b>\n%b"
+    format = "<b><span foreground='#7CB2C6'>%s</span></b>\n%b"
 
 [urgency_normal]
     background = "#362e3c"
