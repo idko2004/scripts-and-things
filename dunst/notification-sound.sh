@@ -18,10 +18,10 @@ else
 #Normal notifications
 	if [[ "$DUNST_URGENCY" = "LOW" ]]
 	then
-		pw-play "/home/idko/.local/share/sounds/Landscape/og/Windows Default.wav"
+		pw-play "/home/idko/.local/share/sounds/Quirky/og/Windows Default.wav"
 	elif [[ "$DUNST_URGENCY" = "NORMAL" ]]
 	then
-		pw-play "/home/idko/.local/share/sounds/Landscape/og/Windows Default.wav"
+		pw-play "/home/idko/.local/share/sounds/Quirky/og/Windows Default.wav"
 	elif [[ "$DUNST_URGENCY" = "CRITICAL" ]]
 	then
 		pw-play "/home/idko/.local/share/sounds/Landscape/og/Windows Critical Stop.wav"
