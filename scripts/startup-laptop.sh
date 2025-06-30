@@ -22,5 +22,5 @@ blueman-applet &
 flatpak run org.keepassxc.KeePassXC &
 
 sleep 0.5
-batsignal -w 18 -c 10 -d 5 -D "/usr/bin/systemctl hibernate" &
+batsignal -b -m +40 -w 18 -c 10 -d 5 -D "/usr/bin/systemctl hibernate"
 "/home/idko/.nvm/versions/node/v20.5.0/bin/node" "/home/idko/Documents/Projects/scripts-and-things/scripts/notifyUpdate.js"
