@@ -58,7 +58,7 @@ then
 		then
 			#Please update this command to use your local mirrors
 			reflector --verbose --country "${REFLECTOR_COUNTRIES}" --protocol https --latest 15 --fastest 5 --save /tmp/idko2004-reflector
-			if [[ $? != "0" ]]
+			if [[ $? == "0" ]]
 			then
 				cat /tmp/idko2004-reflector #Just to show the result in the terminal
 				sudo mv /tmp/idko2004-reflector /etc/pacman.d/mirrorlist
@@ -77,7 +77,7 @@ then
 	figlet Yay | lolcat
 	notify-send "Yay update" "Yay has started working and may need confirmation from your part"
 	yay
-	if [[ $? != "0" ]]
+	if [[ $? == "0" ]]
 	then
 		if [[ $DELETE_ARCH_CACHE == 1 ]]
 		then
@@ -95,7 +95,7 @@ then
 	figlet Paru | lolcat
 	notify-send "Paru update" "Paru has started working and may need confirmation from your part"
 	paru -Syu
-	if [[ $? != "0" ]]
+	if [[ $? == "0" ]]
 	then
 		if [[ $DELETE_ARCH_CACHE == 1 ]]
 		then
@@ -113,7 +113,7 @@ then
 	figlet Pacman | lolcat
 	notify-send "Pacman update" "Pacman has started working and may need confirmation from your part"
 	sudo pacman -Syu
-	if [[ $? != "0" ]]
+	if [[ $? == "0" ]]
 	then
 		if [[ $DELETE_ARCH_CACHE == 1 ]]
 		then
