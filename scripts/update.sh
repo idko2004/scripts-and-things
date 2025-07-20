@@ -60,6 +60,7 @@ then
 			reflector --verbose --country "${REFLECTOR_COUNTRIES}" --protocol https --latest 15 --fastest 5 --save /tmp/idko2004-reflector
 			if [[ $? == "0" ]]
 			then
+				echo -e "\n"
 				cat /tmp/idko2004-reflector #Just to show the result in the terminal
 				sudo mv /tmp/idko2004-reflector /etc/pacman.d/mirrorlist
 			else
