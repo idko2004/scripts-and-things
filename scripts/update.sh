@@ -58,8 +58,13 @@ then
 		then
 			#Please update this command to use your local mirrors
 			reflector --verbose --country "${REFLECTOR_COUNTRIES}" --protocol https --latest 15 --fastest 5 --save /tmp/idko2004-reflector
-			cat /tmp/idko2004-reflector #Just to show the result in the terminal
-			sudo mv /tmp/idko2004-reflector /etc/pacman.d/mirrorlist
+			if [[ $? != "0" ]]
+			then
+				cat /tmp/idko2004-reflector #Just to show the result in the terminal
+				sudo mv /tmp/idko2004-reflector /etc/pacman.d/mirrorlist
+			else
+				cowsay "Failed to update mirrorlist, old mirrors will be used."
+			fi
 		else
 			cowsay "Reflector will be ignored because it was already updated today."
 		fi
@@ -72,12 +77,17 @@ then
 	figlet Yay | lolcat
 	notify-send "Yay update" "Yay has started working and may need confirmation from your part"
 	yay
-	
-	if [[ $DELETE_ARCH_CACHE == 1 ]]
+	if [[ $? != "0" ]]
 	then
-		cowsay "Deleting yay and pacman cache..."
-		rm -fr ~/.cache/yay/*
-		sudo rm -r /var/cache/pacman/pkg/*
+		if [[ $DELETE_ARCH_CACHE == 1 ]]
+		then
+			cowsay "Deleting yay and pacman cache..."
+			rm -fr ~/.cache/yay/*
+			sudo rm -r /var/cache/pacman/pkg/*
+		fi
+	else
+		cowsay "Yay failed!"
+		notify-send "Update" "Yay failed!" -u critical
 	fi
 
 elif command -v paru >/dev/null
@@ -85,12 +95,17 @@ then
 	figlet Paru | lolcat
 	notify-send "Paru update" "Paru has started working and may need confirmation from your part"
 	paru -Syu
-	
-	if [[ $DELETE_ARCH_CACHE == 1 ]]
+	if [[ $? != "0" ]]
 	then
-		cowsay "Deleting paru and pacman cache..."
-		rm -fr ~/.cache/paru/*
-		sudo rm -r /var/cache/pacman/pkg/*
+		if [[ $DELETE_ARCH_CACHE == 1 ]]
+		then
+			cowsay "Deleting paru and pacman cache..."
+			rm -fr ~/.cache/paru/*
+			sudo rm -r /var/cache/pacman/pkg/*
+		fi
+	else
+		cowsay "Paru failed!"
+		notify-send "Update" "Paru failed!" -u critical
 	fi
 
 elif command -v pacman >/dev/null
@@ -98,11 +113,16 @@ then
 	figlet Pacman | lolcat
 	notify-send "Pacman update" "Pacman has started working and may need confirmation from your part"
 	sudo pacman -Syu
-	
-	if [[ $DELETE_ARCH_CACHE == 1 ]]
+	if [[ $? != "0" ]]
 	then
-		cowsay "Deleting pacman cache..."
-		sudo rm -r /var/cache/pacman/pkg/*
+		if [[ $DELETE_ARCH_CACHE == 1 ]]
+		then
+			cowsay "Deleting pacman cache..."
+			sudo rm -r /var/cache/pacman/pkg/*
+		fi
+	else
+		cowsay "Pacman failed!"
+		notify-send "Update" "Pacman failed" -u critical
 	fi
 fi
 
