@@ -26,7 +26,7 @@ then
 fi
 if ! command -v notify-send >/dev/null
 then
-	cosway "notify-send it's not installed"
+	cowsay "notify-send it's not installed"
 	exit 1
 fi
 
